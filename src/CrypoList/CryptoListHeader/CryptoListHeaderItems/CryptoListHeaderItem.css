@@ -1,0 +1,47 @@
+h3 {
+	display: inline;
+	margin-right: 10px;
+}
+
+.headerItem {
+	border: 1px solid black;
+	width: 150px;
+	height: 30px;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+}
+
+.headerItem:hover {
+	cursor: pointer;
+}
+
+.headerItem h3 {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.sort {
+	width: 65%;
+	padding-left: 10px;
+}
+
+.sort:hover {
+	background: lightblue;
+}
+.filter:hover {
+	background: orange;
+}
+
+.sort, .filter {
+	line-height: 30px;
+}
+
+.filter {
+	padding-right: 10px;
+	width: 30%;
+	text-align: center;
+}
+
+
