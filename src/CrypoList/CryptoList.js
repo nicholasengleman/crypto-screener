@@ -351,6 +351,7 @@ class CryptoList extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+
 			cryptoData: [],
 			sortType: {MarketCap: true},
 			filters: []
@@ -431,15 +432,6 @@ class CryptoList extends React.Component {
 
 
 	componentDidMount() {
-		// cryptoData.forEach(function(crypto) {
-		// 	Object.keys(crypto).forEach(function(property, index) {
-		// 		if(index > 3) {
-		// 			console.log(crypto);
-		// 		}
-		// 	})
-		// });
-
-
 		this.setState({cryptoData});
 	}
 
@@ -449,7 +441,7 @@ class CryptoList extends React.Component {
 		return (
 			<main>
 				<ul className="CryptoList">
-					<FilterContainer matchState={this.matchState} removeFilter={this.removeFilter}/>
+					<FilterContainer matchState={this.matchState} removeFilter={this.removeFilter} numberOfFilters={this.state.filters.length}/>
 					<CryptoListHeader
 						sortByMkCap={this.sortByMkCap}
 						sortByPrice={this.sortByPrice}

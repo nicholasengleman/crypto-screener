@@ -33,7 +33,6 @@ class FilterItem extends React.Component {
 		this.props.removeFilter(this.state.column);
 		this.setState({
 			selected: false,
-			column: "",
 			type: 'above',
 			number1: "",
 			number2: "" });
@@ -54,16 +53,19 @@ class FilterItem extends React.Component {
 
 	render() {
 		return (
-			<div className="filterItem">
+			<div className={this.state.selected ? 'filterItem fullOpacity' : this.props.numberOfFilters<1 ? 'filterItem' : 'filterItem noOpacity'}>
 				<form id="action" className="center" >
-					<select name="type" form="action" onChange={this.handleTypeChange}>
+					<select name="type" form="action"  value={this.state.type} onChange={this.handleTypeChange} className={this.state.selected ? 'greyBorder' : 'blackBorder'}>
 						<option value="above">Above</option>
 						<option value="between">Between</option>
 						<option value="below">Below</option>
 					</select>
 					<div className="numberInput">
-						<input type="number" name="action" id="action" value={this.state.number1} onChange={this.handleNumber1Change}/>
-						{(this.state.type === 'between') && <input type="number" name="action" id="action" value={this.state.number2} onChange={this.handleNumber2Change}/> }
+						<input type="number" name="action" id="action" value={this.state.number1} onChange={this.handleNumber1Change}
+							   className={this.state.selected ? 'greyBorder' : 'blackBorder'}/>
+
+						{(this.state.type === 'between') && <input type="number" name="action" id="action" value={this.state.number2} onChange={this.handleNumber2Change}
+																   className={this.state.selected ? 'greyBorder' : 'blackBorder'}/> }
 					</div>
 					{(this.state.selected) ? <button type="button" value="clear" onClick={this.clear}>Clear</button> :  <button type="button" value="submit" onClick={this.submit}>Submit</button>}
 				</form>

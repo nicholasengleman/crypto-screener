@@ -2,6 +2,32 @@
 	width: 150px;
 	height: 100%;
 	margin: 10px 0;
+	opacity: 0.25;
+	transition: opacity 0.2s;
+}
+
+.filterItem:hover .numberInput input, .filterItem:hover select {
+	border: 1px solid grey;
+}
+
+.noOpacity {
+	opacity: 0;
+}
+
+.fullOpacity {
+	opacity: 1;
+}
+
+.greyBorder {
+	border: 1px solid grey;
+}
+
+.blackBorder {
+	border: 1px solid black;
+}
+
+.filterItem:hover, .filterItem:active {
+	opacity: 1;
 }
 
 .numberInput {
@@ -18,6 +44,7 @@
 	outline: none;
 }
 
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -27,9 +54,21 @@
 select, form input {
 	width: 100%;
 	height: 25px;
+	outline: none;
 }
 
 select option {
 	text-align: center;
 }
+
+button {
+	width: 80%;
+	height: 30px;
+	background: darkseagreen;
+	outline: none;
+	border: 1px solid darkgrey;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
 

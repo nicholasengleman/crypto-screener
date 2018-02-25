@@ -8,12 +8,12 @@ class FilterContainer extends React.Component {
 		return (
 			<div className="filterContainer">
 				<FilterItem column="marketCap"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="marketCap"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="price"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="Change1H"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="Change24H"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="Change7D"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} column="Volume"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="marketCap"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="price"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change1H"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change24H"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change7D"/>
+				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Volume"/>
 			</div>
 		)
 	}
