@@ -23,25 +23,15 @@ h3 {
 }
 
 .sort {
-	width: 65%;
+	width: 100%;
 	padding-left: 10px;
 }
 
 .sort:hover {
 	background: lightblue;
 }
-.filter:hover {
-	background: orange;
-}
 
-.sort, .filter {
+.sort {
 	line-height: 30px;
 }
-
-.filter {
-	padding-right: 10px;
-	width: 30%;
-	text-align: center;
-}
-
 
