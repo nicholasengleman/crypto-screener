@@ -1,12 +1,15 @@
 .cryptoListItems {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
-	align-content: space-evenly;
 }
 .cryptoListItems div {
 	width: 150px;
 	height: 30px;
 	text-align: left;
 	line-height: 30px;
+}
+
+.cryptoListItems div:first-child {
+	width: 50px;
 }

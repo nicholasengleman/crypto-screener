@@ -1,8 +1,8 @@
 .CryptoListHeader {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
-	align-content: space-evenly;
 	margin-top: 10px;
+	width: 100%;
 }
 

@@ -1,6 +1,6 @@
 h3 {
 	display: inline;
-	margin-right: 10px;
+	font-size: 20px;
 }
 
 .headerItem {
@@ -8,31 +8,18 @@ h3 {
 	border-top: 1px solid lightgrey;
 	width: 150px;
 	height: 30px;
-	text-align: center;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	line-height: 30px;
+}
+
+.headerItem:first-child {
+	width: 50px;
 }
 
 .headerItem:hover {
 	cursor: pointer;
-}
-
-.headerItem h3 {
-	font-size: 20px;
-	line-height: 30px;
-}
-
-.sort {
-	width: 100%;
-	padding-left: 10px;
-}
-
-.sort:hover {
 	background: #6eeefa;
-}
-
-.sort {
-	line-height: 30px;
 }
 
 .FontAwesomeIcon {

@@ -7,7 +7,8 @@ class FilterContainer extends React.Component {
 	render() {
 		return (
 			<div className="filterContainer">
-				<FilterItem column="marketCap"/>
+				<FilterItem />
+				<FilterItem />
 				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="marketCap"/>
 				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="price"/>
 				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change1H"/>

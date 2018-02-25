@@ -6,6 +6,7 @@ class FilterItem extends React.Component {
 		super(props);
 		this.state = {
 			selected: false,
+			newInput: false,
 			column: "",
 			type: 'above',
 			number1: "",
@@ -25,7 +26,7 @@ class FilterItem extends React.Component {
 
 	submit(event) {
 		this.props.matchState(this.state);
-		this.setState({selected: true });
+		this.setState({selected: true, newInput: false });
 		event.preventDefault();
 	}
 
@@ -33,6 +34,7 @@ class FilterItem extends React.Component {
 		this.props.removeFilter(this.state.column);
 		this.setState({
 			selected: false,
+			newInput: false,
 			type: 'above',
 			number1: "",
 			number2: "" });
@@ -41,13 +43,39 @@ class FilterItem extends React.Component {
 
 	handleTypeChange(event) {
 		this.setState({type: event.target.value});
+		if(this.state.selected) {
+			this.setState({newInput : true});
+		}
 	}
 
 	handleNumber1Change(event) {
 		this.setState({number1: parseFloat(event.target.value) });
+		if(this.state.selected) {
+			this.setState({newInput : true});
+		}
 	}
 	handleNumber2Change(event) {
 		this.setState({number2: parseFloat(event.target.value) });
+		if(this.state.selected) {
+			this.setState({newInput : true});
+		}
+	}
+
+	Buttons() {
+		if(this.state.selected) {
+			if(this.state.newInput) {
+				return (
+					<div className="buttonContainer">
+						<button className="halfWidth submit" type="button" value="submit" onClick={this.submit}>Submit</button>
+						<button className="halfWidth clear" type="button" value="clear" onClick={this.clear}>Clear</button>
+					</div>
+				)
+			} else {
+				return <div className="buttonContainer clear"><button type="button" value="clear" onClick={this.clear}>Clear</button></div>
+			}
+		} else {
+			return <div className="buttonContainer submit"><button type="button" value="submit" onClick={this.submit}>Submit</button></div>
+		}
 	}
 
 
@@ -67,7 +95,7 @@ class FilterItem extends React.Component {
 						{(this.state.type === 'between') && <input type="number" name="action" id="action" value={this.state.number2} onChange={this.handleNumber2Change}
 																   className={this.state.selected ? 'greyBorder' : 'blackBorder'}/> }
 					</div>
-					{(this.state.selected) ? <button type="button" value="clear" onClick={this.clear}>Clear</button> :  <button type="button" value="submit" onClick={this.submit}>Submit</button>}
+					{this.Buttons()}
 				</form>
 			</div>
 		)

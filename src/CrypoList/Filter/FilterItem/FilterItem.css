@@ -2,11 +2,15 @@
 	width: 150px;
 	height: 100%;
 	margin: 10px 0;
-	opacity: 0.25;
+	opacity: 0.6;
 	transition: opacity 0.2s;
 }
 
-.filterItem:hover .numberInput input, .filterItem:hover select {
+.filterItem:first-child {
+	width: 50px;
+}
+
+.filterItem:nth-child(n+3):hover .numberInput input, .filterItem:nth-child(n+3):hover select {
 	border: 1px solid grey;
 }
 
@@ -26,7 +30,7 @@
 	border: 1px solid black;
 }
 
-.filterItem:hover, .filterItem:active {
+.filterItem:nth-child(n+3):hover, .filterItem:nth-child(n+3):active {
 	opacity: 1;
 }
 
@@ -44,7 +48,6 @@
 	outline: none;
 }
 
-
 .center {
 	display: flex;
 	justify-content: center;
@@ -61,14 +64,37 @@ select option {
 	text-align: center;
 }
 
+/*
+Button Styles
+ */
+
 button {
 	width: 80%;
 	height: 30px;
-	background: darkseagreen;
 	outline: none;
 	border: 1px solid darkgrey;
 	border-radius: 6px;
 	font-weight: bold;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.halfWidth button {
+	width: 30%;
+	border-radius: 3px;
+}
+
+.clear button {
+	background: lightskyblue;
+}
+
+.submit button {
+	background: darkseagreen;
 }
 
 
