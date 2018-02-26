@@ -10,7 +10,7 @@ class FilterItem extends React.Component {
 			selected: false,
 			newInput: false,
 			column: "",
-			type: 'above',
+			type: "",
 			number1: "",
 			number2: ""
 		};
@@ -41,7 +41,7 @@ class FilterItem extends React.Component {
 		this.setState({
 			selected: false,
 			newInput: false,
-			type: 'above',
+			type: "",
 			number1: "",
 			number2: ""
 		});
@@ -53,17 +53,18 @@ class FilterItem extends React.Component {
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
+		event.preventDefault();
 	}
 
 	handleNumber1Change(event) {
-		this.setState({number1: event.target.value});
+		this.setState({number1: parseFloat(event.target.value)});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
 	}
 
 	handleNumber2Change(event) {
-		this.setState({number2: event.target.value});
+		this.setState({number2: parseFloat(event.target.value)});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
@@ -74,9 +75,9 @@ class FilterItem extends React.Component {
 			if (this.state.newInput) {
 				return (
 					<div className="buttonContainer">
-						<button className="halfWidth submit" type="button" value="submit" onClick={this.submit}>Submit
+						<button className="submit betweenButtons" type="button" value="submit" onClick={this.submit}>Submit
 						</button>
-						<button className="halfWidth clear" type="button" value="clear" onClick={this.clear}>Clear
+						<button className="clear betweenButtons" type="button" value="clear" onClick={this.clear}>Clear
 						</button>
 					</div>
 				)
@@ -97,20 +98,20 @@ class FilterItem extends React.Component {
 		return (
 			<div
 				className={this.state.selected ? 'filterItem fullOpacity' : this.props.numberOfFilters < 1 ? 'filterItem' : 'filterItem noOpacity'}>
-				<form id="action" className="center">
-					<FilterTypeButton type=">cryptos<"/>
+				<form id="action">
 					<div className="flexBox">
-						<FilterTypeButton type="cryptos<"/>
-						<div className="numberInput">
-							<input type="text" name="action" id="action" value={this.state.number1}
-								   onChange={this.handleNumber1Change}
-								   className={this.state.selected ? 'greyBorder' : 'blackBorder'}/>
-							{(this.state.type === 'between') &&
-							<input type="number" name="action" id="action" value={this.state.number2}
-								   onChange={this.handleNumber2Change}
-								   className={this.state.selected ? 'greyBorder' : 'blackBorder'}/>}
-						</div>
-						<FilterTypeButton type="<cryptos"/>
+						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="below"/>
+						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="between"/>
+						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="above"/>
+					</div>
+					<div className="numberInput">
+						<input type="number" name="action" id="action" value={this.state.number1}
+							   onChange={this.handleNumber1Change}
+							   className={(this.state.type === 'between') ? 'betweenWidth' : ''}/>
+						{(this.state.type === 'between') && <input type="number" name="action" id="action"
+																   value={this.state.number2}
+																   onChange={this.handleNumber2Change}
+																   className='betweenWidth'/>}
 					</div>
 					{this.Buttons()}
 				</form>

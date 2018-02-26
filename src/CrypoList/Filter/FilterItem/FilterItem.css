@@ -10,10 +10,6 @@
 	width: 50px;
 }
 
-.filterItem:nth-child(n+3):hover .numberInput input, .filterItem:nth-child(n+3):hover select {
-	border: 1px solid grey;
-}
-
 .noOpacity {
 	opacity: 0;
 }
@@ -22,85 +18,86 @@
 	opacity: 1;
 }
 
-.greyBorder {
-	border: 1px solid grey;
-}
-
-.blackBorder {
-	border: 1px solid black;
-}
-
 .filterItem:nth-child(n+3):hover, .filterItem:nth-child(n+3) input:focus, .filterItem:nth-child(n+3) input:active {
 	opacity: 1;
 }
 
+
+/*
+Top Row of Type Selector Button Styles
+ */
+
+.flexBox {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/*
+Styles for number Inputs
+ */
+
 .numberInput {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	width: 100%;
 	margin: 10px 0;
 }
 
 .numberInput input {
-	width: 40%;
+	width: 45%;
 	text-align: center;
 	outline: none;
-}
-
-.center {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-select, form input {
-	width: 100%;
 	height: 25px;
-	outline: none;
+	border: 2px solid darkslategrey;
+	border-radius: 5px;
 }
 
-select option {
-	text-align: center;
+.numberInput input.betweenWidth  {
+	width: 30%;
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
 
 /*
-Button Styles
+Styles for Bottom Row of Submit and Clear buttons
  */
 
-button {
-	width: 80%;
-	height: 30px;
-	outline: none;
-	border: 1px solid darkgrey;
-	font-weight: bold;
-	margin: 0 auto;
-}
 
 .buttonContainer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	width: 100%;
 }
 
-.halfWidth {
-	width: 44%;
+.buttonContainer button {
+	width: 70%;
+	height: 30px;
+	outline: none;
+	border: 1px solid darkslategrey;
+	font-weight: bold;
 }
 
-.clear {
+.buttonContainer button.clear {
 	background: lightskyblue;
 	border-radius: 30px;
 }
 
-.submit {
+.buttonContainer button.submit {
 	background: darkseagreen;
 	border-radius: 5px;
 }
 
-.flexBox {
-	display: flex;
-	justify-content: space-between;
-	align-content: center;
-	border: 1px solid black;
+.buttonContainer button.betweenButtons {
+	width: 40%;
 }
+
 
 
