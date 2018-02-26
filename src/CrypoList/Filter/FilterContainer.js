@@ -9,12 +9,12 @@ class FilterContainer extends React.Component {
 			<div className="filterContainer">
 				<FilterItem />
 				<FilterItem />
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="marketCap"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="price"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change1H"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change24H"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Change7D"/>
-				<FilterItem matchState={this.props.matchState} removeFilter={this.props.removeFilter} numberOfFilters={this.props.numberOfFilters} column="Volume"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="marketCap"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="price"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="Change1H"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="Change24H"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="Change7D"/>
+				<FilterItem addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} updateFilter={this.props.updateFilter} numberOfFilters={this.props.numberOfFilters} column="Volume"/>
 			</div>
 		)
 	}

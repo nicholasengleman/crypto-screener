@@ -30,7 +30,7 @@
 	border: 1px solid black;
 }
 
-.filterItem:nth-child(n+3):hover, .filterItem:nth-child(n+3):active {
+.filterItem:nth-child(n+3):hover, .filterItem:nth-child(n+3) input:focus, .filterItem:nth-child(n+3) input:active {
 	opacity: 1;
 }
 
@@ -43,7 +43,6 @@
 
 .numberInput input {
 	width: 40%;
-	margin: 0 5px;
 	text-align: center;
 	outline: none;
 }
@@ -73,28 +72,35 @@ button {
 	height: 30px;
 	outline: none;
 	border: 1px solid darkgrey;
-	border-radius: 6px;
 	font-weight: bold;
+	margin: 0 auto;
 }
 
 .buttonContainer {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	width: 100%;
-	border: 1px solid black;
 }
 
-.halfWidth button {
-	width: 30%;
-	border-radius: 3px;
+.halfWidth {
+	width: 44%;
 }
 
-.clear button {
+.clear {
 	background: lightskyblue;
+	border-radius: 30px;
 }
 
-.submit button {
+.submit {
 	background: darkseagreen;
+	border-radius: 5px;
+}
+
+.flexBox {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	border: 1px solid black;
 }
 
 

@@ -364,11 +364,24 @@ class CryptoList extends React.Component {
 		this.sortByChange24H = this.sortByChange24H.bind(this);
 		this.sortByChange7D = this.sortByChange7D.bind(this);
 		this.sortByVolume = this.sortByVolume.bind(this);
-		this.matchState = this.matchState.bind(this);
+
+		this.addFilter = this.addFilter.bind(this);
 		this.removeFilter = this.removeFilter.bind(this);
+		this.updateFilter = this.updateFilter.bind(this);
 	}
 
-	matchState(FilterItemState) {
+	updateFilter(filterToUpdate, newStateOfFilter) {
+		let newState = this.state.filters.filter(function (filter) {
+			if (filter.column !== filterToUpdate) {
+				return true;
+			}
+			return false;
+		});
+		newState.push(newStateOfFilter);
+		this.setState({filters: newState});
+	}
+
+	addFilter(FilterItemState) {
 		this.setState({filters: [...this.state.filters, FilterItemState]});
 	}
 
@@ -467,8 +480,9 @@ class CryptoList extends React.Component {
 		const sortedData = this.state.cryptoData.slice(0);
 		return (
 			<main>
-				<FilterContainer matchState={this.matchState}
+				<FilterContainer addFilter={this.addFilter}
 								 removeFilter={this.removeFilter}
+								 updateFilter={this.updateFilter}
 								 numberOfFilters={this.state.filters.length}/>
 				<CryptoListHeader
 					sortByRank={this.sortByRank}
