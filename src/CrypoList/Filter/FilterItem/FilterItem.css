@@ -2,7 +2,7 @@
 	width: 150px;
 	height: 100%;
 	margin: 10px 0;
-	opacity: 0.6;
+	opacity: 0.8;
 	transition: opacity 0.2s;
 }
 
@@ -31,6 +31,25 @@ Top Row of Type Selector Button Styles
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+}
+
+
+.flexBox:hover button {
+	opacity: 1;
+	position: static;
+
+	width: 30%;
+	font-size: 10px;
+	height: 20px;
+	background: lightskyblue;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	margin: 0;
+}
+
+.flexBox button:hover {
+	border: 1px solid black;
 }
 
 /*
@@ -83,6 +102,11 @@ Styles for Bottom Row of Submit and Clear buttons
 	outline: none;
 	border: 1px solid darkslategrey;
 	font-weight: bold;
+	box-shadow: 0 1px 1px darkslategrey;
+}
+
+.buttonContainer button:hover {
+	box-shadow: 0 1px 3px darkslategrey;
 }
 
 .buttonContainer button.clear {

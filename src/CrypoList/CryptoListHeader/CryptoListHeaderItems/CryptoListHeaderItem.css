@@ -4,8 +4,8 @@ h3 {
 }
 
 .headerItem {
-	border-bottom: 1px solid lightgrey;
-	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid #b4b4b4;
+	border-top: 1px solid #b4b4b4;
 	width: 150px;
 	height: 30px;
 	display: flex;

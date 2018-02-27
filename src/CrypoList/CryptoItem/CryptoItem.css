@@ -2,14 +2,31 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px dotted lightgrey;
+	font-family: Calibri;
+	font-size: 16px;
 }
 .cryptoListItems div {
 	width: 150px;
-	height: 30px;
+	height: 35px;
 	text-align: left;
-	line-height: 30px;
+	line-height: 35px;
 }
 
 .cryptoListItems div:first-child {
 	width: 50px;
 }
+
+.formatForProfit {
+	color: green;
+}
+
+.formatForLoss {
+	color: red;
+}
+
+.cryptoName h2 {
+	font-size: 20px;
+	color: #428bca;
+}
+

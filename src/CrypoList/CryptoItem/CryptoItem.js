@@ -23,12 +23,12 @@ class CryptoItem extends React.Component {
 		return (
 			<li className="cryptoListItems">
 					<div>{this.props.rank}</div>
-					<div>{this.props.crypto}</div>
+					<div className="cryptoName"><h2>{this.props.crypto}</h2></div>
 					<div>${this.numberWithCommas(this.props.marketCap, false)}</div>
 					<div>${this.numberWithCommas(this.props.price, true)}</div>
-					<div>{this.props.percentChange_1h}%</div>
-					<div>{this.props.percentChange_24h}%</div>
-					<div>{this.props.percentChange_7d}%</div>
+					<div className={this.props.percentChange_7d > 0 ? 'formatForProfit' : 'formatForLoss'}><p>{this.props.percentChange_1h}%</p></div>
+					<div className={this.props.percentChange_7d > 0 ? 'formatForProfit' : 'formatForLoss'}><p>{this.props.percentChange_24h}%</p></div>
+					<div className={this.props.percentChange_7d > 0 ? 'formatForProfit' : 'formatForLoss'}><p>{this.props.percentChange_7d}%</p></div>
 					<div>${this.numberWithCommas(this.props.volume24usd, false)}</div>
 			</li>
 		)

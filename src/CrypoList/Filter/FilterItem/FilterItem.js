@@ -57,14 +57,14 @@ class FilterItem extends React.Component {
 	}
 
 	handleNumber1Change(event) {
-		this.setState({number1: parseFloat(event.target.value)});
+		this.setState({number1: event.target.value});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
 	}
 
 	handleNumber2Change(event) {
-		this.setState({number2: parseFloat(event.target.value)});
+		this.setState({number2: event.target.value});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
@@ -100,9 +100,9 @@ class FilterItem extends React.Component {
 				className={this.state.selected ? 'filterItem fullOpacity' : this.props.numberOfFilters < 1 ? 'filterItem' : 'filterItem noOpacity'}>
 				<form id="action">
 					<div className="flexBox">
-						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="below"/>
-						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="between"/>
-						<FilterTypeButton type={this.state.type} clickEvent={this.handleTypeChange} value="above"/>
+						<FilterTypeButton selected={this.state.selected} type={this.state.type} clickEvent={this.handleTypeChange} value="below"/>
+						<FilterTypeButton selected={this.state.selected} type={this.state.type} clickEvent={this.handleTypeChange} value="between"/>
+						<FilterTypeButton selected={this.state.selected} type={this.state.type} clickEvent={this.handleTypeChange} value="above"/>
 					</div>
 					<div className="numberInput">
 						<input type="number" name="action" id="action" value={this.state.number1}
