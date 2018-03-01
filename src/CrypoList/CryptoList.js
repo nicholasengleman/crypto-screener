@@ -2,17 +2,18 @@ import React from 'react';
 import './CryptoList.css';
 import CryptoItem from './CryptoItem/CryptoItem';
 import CryptoListHeader from './CryptoListHeader/CryptoListHeader';
-import FilterContainer from './Filter/FilterContainer';
-
+import FilterContainer from './Filter Container/FilterContainer';
 
 class CryptoList extends React.Component {
 	constructor(props) {
 		super(props);
+		this.sortedFilteredCryptos = [];
 		this.state = {
 			cryptoData: [],
 			sortType: {MarketCap: true},
 			filters: []
 		};
+
 
 		this.sortByRank = this.sortByRank.bind(this);
 		this.sortByName = this.sortByName.bind(this);
@@ -130,7 +131,10 @@ class CryptoList extends React.Component {
 					if (crypto.hasOwnProperty(property1)) {
 						const parsedtoFloat = parseFloat(crypto[property1]);
 						if (parsedtoFloat) {
-							crypto[property1] = parseFloat(crypto[property1]);
+							crypto[property1] = parsedtoFloat;
+						}
+						if(property1 === 'market_cap_usd') {
+							crypto[property1] = (crypto[property1] / 1000000).toFixed(1);
 						}
 					}
 				}
@@ -139,9 +143,21 @@ class CryptoList extends React.Component {
 		});
 	}
 
+	componentDidUpdate() {
+		this.props.getTotalCryptosAfterFilters(this.sortedFilteredCryptos.length);
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		if(nextState !== this.state) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 	render() {
-		const sortedData = this.state.cryptoData.slice(0);
+		 this.sortedFilteredCryptos = this.state.cryptoData.slice(0);
 		return (
 			<main>
 				<FilterContainer addFilter={this.addFilter}
@@ -161,7 +177,7 @@ class CryptoList extends React.Component {
 
 				<ul className="CryptoList">
 					{
-						sortedData.filter(crypto => {
+						this.sortedFilteredCryptos = this.sortedFilteredCryptos.filter(crypto => {
 							let filters = this.state.filters;
 							if (filters.length > 0) {
 								let result = false;
@@ -249,10 +265,10 @@ class CryptoList extends React.Component {
 									return b.rank - a.rank;
 								}
 								if (this.state.sortType.Name === true) {
-									return a.name.localeCompare(b.name);
+									return a.name > b.name ? 1 : -1;
 								}
 								if (this.state.sortType.Name === false) {
-									return b.name.localeCompare(a.name);
+									return a.name < b.name ? 1 : -1;
 								}
 								if (this.state.sortType.Price === true) {
 									return a.price_usd - b.price_usd;

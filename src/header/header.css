@@ -1,8 +1,7 @@
 .header {
-	height: 100px;
+	height: 75px;
 	line-height: 100px;
 	text-align: center;
-	border-bottom: 1px solid grey;
 }
 
 .header h1 {

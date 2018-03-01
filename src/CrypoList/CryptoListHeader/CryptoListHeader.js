@@ -8,7 +8,7 @@ class CryptoListHeader extends React.Component {
 			<li className="CryptoListHeader">
 					<CryptoListHeaderItem title="#" clickEvent={this.props.sortByRank}/>
 					<CryptoListHeaderItem title="Name" clickEvent={this.props.sortByName}/>
-					<CryptoListHeaderItem title="Market Cap" clickEvent={this.props.sortByMkCap}/>
+					<CryptoListHeaderItem title="Market Cap(m)" clickEvent={this.props.sortByMkCap}/>
 					<CryptoListHeaderItem title="Price" clickEvent={this.props.sortByPrice}/>
 					<CryptoListHeaderItem title="Change(1h)" clickEvent={this.props.sortByChange1H}/>
 					<CryptoListHeaderItem title="Change(24h)" clickEvent={this.props.sortByChange24H}/>
