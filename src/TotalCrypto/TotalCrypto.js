@@ -1,6 +1,7 @@
 import React from 'react';
 import './TotalCrypto.css';
 
+
 class TotalCrypto extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,7 +14,7 @@ class TotalCrypto extends React.Component {
 
 	render() {
 		return (
-			<div className="totalCrypto"><p>Total Cryptos: {this.props.totalCryptos}</p></div>
+			<div className="totalCrypto">Total Cryptos: {this.props.totalCryptos}</div>
 		)
 	}
 }

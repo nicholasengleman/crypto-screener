@@ -8,7 +8,10 @@
     "@fortawesome/react-fontawesome": "^0.0.17",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +24,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "redux-devtools": "^3.4.1"
   }
 }
