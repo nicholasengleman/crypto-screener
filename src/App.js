@@ -1,6 +1,7 @@
+//import Reboot from 'material-ui/reboot';
 import React, { Component } from 'react';
-import './App.css';
 
+import './App.css';
 import Header from './header/Header';
 import CryptoList from './CrypoList/CryptoList';
 import TotalCrypto from './TotalCrypto/TotalCrypto';

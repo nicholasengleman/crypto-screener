@@ -24,7 +24,13 @@ class CryptoItem extends React.Component {
 		return (
 			<li className="cryptoListItems">
 					<div>{this.props.rank}</div>
-				<div className="cryptoName"><Link to={`${this.props.crypto}`}><h2>{this.props.crypto}</h2></Link></div>
+					<div className="cryptoName">
+						<Link
+							to={{
+								pathname: `${this.props.crypto}`,
+								state: {symbol : this.props.symbol }
+								}}>
+							<h2>{this.props.crypto}</h2></Link></div>
 					<div>${this.numberWithCommas(this.props.marketCap, false)}</div>
 					<div>${this.numberWithCommas(this.props.price, true)}</div>
 					<div className={this.props.percentChange_7d > 0 ? 'formatForProfit' : 'formatForLoss'}><p>{this.props.percentChange_1h}%</p></div>

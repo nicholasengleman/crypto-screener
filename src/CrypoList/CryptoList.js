@@ -123,7 +123,6 @@ class CryptoList extends React.Component {
 	componentDidMount() {
 		fetch('https://api.coinmarketcap.com/v1/ticker/?limit=500')
 			.then(results => {
-				console.log("tes");
 				return results.json();
 			}).then(data => {
 
@@ -175,7 +174,6 @@ class CryptoList extends React.Component {
 					sortByChange7D={this.sortByChange7D}
 					sortByVolume={this.sortByVolume}
 				/>
-
 				<ul className="CryptoList">
 					{
 						this.sortedFilteredCryptos = this.sortedFilteredCryptos.filter(crypto => {
@@ -312,6 +310,7 @@ class CryptoList extends React.Component {
 							.map(crypto => (
 								<CryptoItem
 									key={crypto.id}
+									symbol={crypto.symbol}
 									rank={crypto.rank}
 									crypto={crypto.name}
 									marketCap={crypto.market_cap_usd}
