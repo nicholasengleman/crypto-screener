@@ -1,5 +1,6 @@
 import React from 'react';
 import './IndivisualCryptoContainer.css';
+import TradingViewWidget from 'react-tradingview-widget';
 
 import CryptoSummary from './CryptoSummary/CryptoSummary';
 import CryptoEvents from './CryptoEvents/CryptoEvents';
@@ -9,7 +10,7 @@ class IndividualCryptoContainer extends React.Component {
 		return (
 			<div className="individualCryptoContainer">
 				<div className="chart">
-					<p>Chart</p>
+					<TradingViewWidget symbol="COINBASE:BTCUSD" autosize allow_symbol_change={false} />
 				</div>
 				<div className="info">
 					<CryptoSummary id={this.props.match.params.ID}/>

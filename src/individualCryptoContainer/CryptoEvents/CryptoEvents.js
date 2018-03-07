@@ -20,10 +20,11 @@ class CryptoEvents extends React.Component {
 
 
 	componentDidMount() {
-		fetch(`https://kryptocal.com/api/events/coin/${this.props.symbol}`)
+		fetch(`https://coindar.org/api/v1/coinEvents?name=btc`)
 			.then(response => {
 				return response.json();
 			}).then(json => {
+			console.log('parsing passed', json);
 			this.setState({eventData: json});
 		}).catch(ex => {
 			console.log('parsing failed', ex);
@@ -32,23 +33,7 @@ class CryptoEvents extends React.Component {
 
 	render() {
 		return (
-			<section>
-				<div className='centerAddEventButton'><a href="https://kryptocal.com/submitevent"><button className='submitEvent'>Add {this.props.name} event on kryptocal.com</button></a></div>
-				<ul className="eventList">
-					{
-						this.state.eventData.map(event => (
-							<Event
-								key={event.eventId}
-								date={this.standardizeDate(event.fullEventDateString)}
-								title={event.title}
-								summary={event.summary}
-						    	sourceLink={event.sourceUrl}
-								kryptocalLink={event.eventUrl}
-							/>
-						))
-					}
-				</ul>
-			</section>
+			<p>test</p>
 
 		)
 	}
