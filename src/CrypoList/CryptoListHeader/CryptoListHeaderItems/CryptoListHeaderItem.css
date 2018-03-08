@@ -17,6 +17,14 @@ h3 {
 	width: 50px;
 }
 
+.headerItem:nth-child(2) {
+	width: 275px;
+}
+
+
+
+
+
 .headerItem:hover {
 	cursor: pointer;
 	background: #6eeefa;

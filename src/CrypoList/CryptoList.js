@@ -319,7 +319,7 @@ class CryptoList extends React.Component {
 									percentChange_24h={crypto.percent_change_24h}
 									percentChange_7d={crypto.percent_change_7d}
 									volume24usd={crypto['24h_volume_usd']}
-								/>
+									/>
 							))
 					}
 				</ul>

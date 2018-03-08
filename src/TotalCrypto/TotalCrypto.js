@@ -11,10 +11,11 @@ class TotalCrypto extends React.Component {
 	};
 
 
-
 	render() {
 		return (
-			<div className="totalCrypto">Total Cryptos: {this.props.totalCryptos}</div>
+			<div className="totalCryptoContainer">
+				<div className="totalCryptoNumber"><p>Total Coins: <span className="bold">{this.props.totalCryptos}</span></p></div>
+			</div>
 		)
 	}
 }
