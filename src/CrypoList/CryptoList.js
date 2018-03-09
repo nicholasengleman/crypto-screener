@@ -159,7 +159,7 @@ class CryptoList extends React.Component {
 	render() {
 		 this.sortedFilteredCryptos = this.state.cryptoData.slice(0);
 		return (
-			<main>
+			<main className="main">
 				<FilterContainer addFilter={this.addFilter}
 								 removeFilter={this.removeFilter}
 								 updateFilter={this.updateFilter}
