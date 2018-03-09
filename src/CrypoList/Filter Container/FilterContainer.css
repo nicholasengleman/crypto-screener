@@ -1,0 +1,16 @@
+.filterContainer {
+	display: flex;
+	justify-content: space-between;
+	min-width: 1000px;
+}
+
+.spaceMaker1 {
+	width: 50px;
+	margin: 10px 0;
+}
+
+.spaceMaker2 {
+	width: 275px;
+	margin: 10px 0;
+}
+

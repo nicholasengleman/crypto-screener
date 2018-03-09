@@ -1,4 +1,11 @@
 .square {
   width: 90%;
+  min-width: 1000px;
   margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .square {
+    margin-left: 20px;
+  }
 }
