@@ -8,13 +8,12 @@ button {
 	height: 20px;
 	background: lightskyblue;
 	outline: none;
-	border: 1px solid lightgrey;
+	border: 1px solid grey;
 	border-radius: 5px;
 }
 
 
 .typeButtonSelected {
-	border: 2px solid lightgrey;
 	box-shadow: 0 2px 6px darkslategrey;
 }
 

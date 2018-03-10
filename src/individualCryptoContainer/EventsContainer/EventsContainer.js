@@ -40,10 +40,11 @@ class EventsContainer extends React.Component {
 			}
  		});
 		this.events = this.events.slice(0, 5);
+		console.log(this.events);
 		return (
 			<section className="eventsContainer">
 			{
-			this.events = this.events.map((event) => (
+				this.events.length > 0 ? (this.events = this.events.map((event) => (
 					<Event
 						title={this.removeDoubleName(event[this.props.symbol]['0'].title)}
 						summary={event[this.props.symbol]['1'].summary}
@@ -52,7 +53,9 @@ class EventsContainer extends React.Component {
 						date={this.convertDate(event[this.props.symbol]['4'].date)}
 						key={event[this.props.symbol]['5'].eventID}
 					/>
-			))
+					))) : (<Event
+								summary='No Event Data'
+							/>)
 			}
 			</section>
 		)

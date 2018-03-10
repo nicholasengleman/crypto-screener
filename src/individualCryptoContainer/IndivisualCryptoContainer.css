@@ -10,7 +10,7 @@
 	justify-content: space-evenly;
 }
 
-.cryptoName {
+.individualcryptoName {
 	width: 50%;
 	margin: 0 auto 45px auto;
 	height: 60px;
@@ -19,7 +19,7 @@
 	box-shadow: 1px 1px 20px cornflowerblue;
 }
 
-.cryptoName h1 {
+.individualcryptoName h1 {
 	font-size: 50px;
 	font-family: Garamond;
 }

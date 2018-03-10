@@ -12,7 +12,7 @@ class IndividualCryptoContainer extends React.Component {
 			<div className="individualCryptoContainer">
 
 				<div className="firstColumn">
-					<div className="cryptoName"><h1>{this.props.match.params.ID}</h1></div>
+					<div className="individualcryptoName"><h1>{this.props.match.params.ID}</h1></div>
 					<div className="chart">
 						<TradingViewWidget symbol={TradingViewIDLookup(this.props.location.state.symbol)}
 										   interval={60}

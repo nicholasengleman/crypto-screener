@@ -1,5 +1,6 @@
 import React from 'react';
 import './CryptoItem.css';
+import { Link } from 'react-router-dom';
 
 class CryptoItem extends React.Component {
 	constructor(props) {
@@ -25,7 +26,13 @@ class CryptoItem extends React.Component {
 				<div>{this.props.rank}</div>
 				<div className="cryptoName">
 					<img src={`https://chasing-coins.com/api/v1/std/logo/${this.props.symbol}`} alt=""/>
-					<h2>{this.props.crypto}</h2>
+					<Link
+						to={{
+							pathname: `${this.props.crypto}`,
+							state: {symbol : this.props.symbol }
+						}}>
+						<h2>{this.props.crypto}</h2>
+					</Link>
 				</div>
 				<div>${this.numberWithCommas(this.props.marketCap, false)}</div>
 				<div>${this.numberWithCommas(this.props.price, true)}</div>
