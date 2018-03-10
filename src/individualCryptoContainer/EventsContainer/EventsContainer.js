@@ -39,8 +39,9 @@ class EventsContainer extends React.Component {
 				return true;
 			}
  		});
+		this.events = this.events.slice(0, 5);
 		return (
-			<section>
+			<section className="eventsContainer">
 			{
 			this.events = this.events.map((event) => (
 					<Event

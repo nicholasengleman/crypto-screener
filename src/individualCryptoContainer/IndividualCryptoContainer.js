@@ -10,13 +10,23 @@ class IndividualCryptoContainer extends React.Component {
 	render() {
 		return (
 			<div className="individualCryptoContainer">
-				<div className="chart">
-					<TradingViewWidget symbol={TradingViewIDLookup(this.props.location.state.symbol)} autosize allow_symbol_change={false} />
+
+				<div className="firstColumn">
+					<div className="cryptoName"><h1>{this.props.match.params.ID}</h1></div>
+					<div className="chart">
+						<TradingViewWidget symbol={TradingViewIDLookup(this.props.location.state.symbol)}
+										   interval={60}
+										   save_image={false}
+										   autosize
+										   allow_symbol_change={false}/>
+					</div>
 				</div>
-				<div className="info">
+
+				<div className="secondColumn">
 					<CryptoSummary id={this.props.location.state.symbol}/>
 					<EventsContainer symbol={this.props.location.state.symbol} name={this.props.match.params.ID}/>
 				</div>
+
 			</div>
 		)
 	}

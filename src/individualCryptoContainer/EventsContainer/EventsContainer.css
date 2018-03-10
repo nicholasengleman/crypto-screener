@@ -1,4 +1,10 @@
-
+.eventsContainer {
+	width: 80%;
+	height: 700px;
+	margin: 0 auto;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 20px cornflowerblue;
+}
 button.submitEvent {
 	height: 40px;
 	width: 50%;
@@ -21,4 +27,7 @@ button.submitEvent:hover {
 	margin: 0 auto;
 	width: 100%;
 }
+
+
+
 
