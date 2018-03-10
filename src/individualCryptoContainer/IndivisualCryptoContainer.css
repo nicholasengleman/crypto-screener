@@ -1,0 +1,33 @@
+.individualCryptoContainer {
+	display: flex;
+	justify-content: space-evenly;
+	width: 90%;
+	margin: 50px auto;
+}
+
+.firstColumn, .secondColumn {
+	width: 45%;
+	justify-content: space-evenly;
+}
+
+.cryptoName {
+	width: 50%;
+	margin: 0 auto 45px auto;
+	height: 60px;
+	text-align: center;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 20px cornflowerblue;
+}
+
+.cryptoName h1 {
+	font-size: 50px;
+	font-family: Garamond;
+}
+
+
+.chart {
+	height: 700px;
+	width: 100%;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 20px cornflowerblue;
+}

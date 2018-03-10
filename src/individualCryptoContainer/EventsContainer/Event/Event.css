@@ -1,0 +1,46 @@
+.event {
+	display: flex;
+	border-bottom: 1px solid lightgrey;
+	height: 20%;
+}
+
+.eventDate {
+	border-right: 1px dotted lightgrey;
+	width: 175px;
+	padding: 10px;
+	background: #58ffe4;
+	text-align: center;
+}
+
+.eventInfo {
+	width: 100%;
+	background: #3ef8fa;
+}
+
+.eventTitle {
+	height: 5%;
+	font-weight: bold;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.eventSummary {
+	line-height: 20px;
+	padding: 10px;
+	height: 45%;
+	font-size: 14px;
+}
+
+.links {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 12px;
+}
+
+.links a {
+	text-decoration: none;
+}
