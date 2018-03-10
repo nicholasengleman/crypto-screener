@@ -1,18 +1,12 @@
 export default function cryptoData(cryptoId) {
 	const cryptoSummary = [
-		{
-			id: 'Bitcoin',
-			summary: 'a cryptocurrency and worldwide payment system'
-		},
-		{
-			id: 'NEO',
-			summary: 'the chinease version of Etherium'
-		}
+		{ id: 'BTC',  summary: 'Bitcoin is a cryptocurrency and worldwide payment system' },
+		{ id: 'ETH',  summary: 'Ethereum is the chinease version of Bitcoin' }
 	];
 
 	for(let e = 0; e<cryptoSummary.length; e++) {
 		if(cryptoSummary[e].id === cryptoId) {
-			return cryptoData[e].summary;
+			return cryptoSummary[e].summary;
 		}
 	}
 	return 'a summary has not yet been created for this crypto';
