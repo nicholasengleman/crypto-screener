@@ -1,26 +1,9 @@
 .eventsContainer {
 	width: 80%;
-	height: 700px;
+	min-width: 500px;
 	margin: 0 auto;
-	border: 1px solid grey;
-	box-shadow: 1px 1px 20px cornflowerblue;
-}
-button.submitEvent {
-	height: 40px;
-	width: 50%;
-	background: #a3d5a3;
-	border: 2px groove black;
-	margin-left: 25%;
-	outline: none;
-	border-radius: 30px;
-	font-weight: bold;
-	cursor: pointer;
-	font-family:Cambria;
-	letter-spacing: 2px;
-}
-
-button.submitEvent:hover {
-	background: #d0f2c9;
+	border: 1px solid darkgrey;
+	box-shadow: 1px 1px 20px #478bdc;
 }
 
 .centerAddEventButton {

@@ -4,7 +4,8 @@ import cryptoSummaries from "../../HelpFunctions/cryptoSummaries";
 
 const CryptoSummary = ({id}) => (
 	<section className="cryptoSummary">
-		<p>{cryptoSummaries(id)}</p>
+		<p>"{cryptoSummaries(id, 'summary')}"</p>
+		<p> ~ <a href={cryptoSummaries(id, 'moreinfourl')}>learn more here</a> ~</p>
 	</section>
 );
 

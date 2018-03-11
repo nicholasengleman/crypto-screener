@@ -1,33 +1,59 @@
+header.individualcrypto {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid darkslategrey;
+	background: #478bdc;
+	line-height: 60px;
+}
+
+.individualcrypto h1 {
+	font-size: 50px;
+	font-family: Garamond;
+	margin-left: 70px;
+	letter-spacing: 7px;
+}
+
 .individualCryptoContainer {
 	display: flex;
 	justify-content: space-evenly;
 	width: 90%;
-	margin: 50px auto;
+	margin: 40px auto 0 auto;
 }
 
-.firstColumn, .secondColumn {
-	width: 45%;
-	justify-content: space-evenly;
-}
-
-.individualcryptoName {
+.leftColumn {
 	width: 50%;
-	margin: 0 auto 45px auto;
-	height: 60px;
-	text-align: center;
-	border: 1px solid grey;
-	box-shadow: 1px 1px 20px cornflowerblue;
 }
-
-.individualcryptoName h1 {
-	font-size: 50px;
-	font-family: Garamond;
-}
-
 
 .chart {
-	height: 700px;
-	width: 100%;
-	border: 1px solid grey;
-	box-shadow: 1px 1px 20px cornflowerblue;
+	height: 600px;
+	border: 1px solid darkgrey;
+	box-shadow: 1px 1px 20px #478bdc;
 }
+
+.rightColumn {
+	width: 40%;
+}
+
+button.submitEvent {
+	height: 40px;
+	width: 250px;
+	background: green;
+	color: white;
+	border: none;
+	box-shadow: 0 2px 5px lightgrey;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family:Cambria;
+	letter-spacing: 1px;
+	margin: 25px 30%;
+	outline: none;
+	transition: all 0.25s;
+}
+
+button.submitEvent:active {
+	box-shadow: 0 5px 15px lightgrey;
+	background: #00a700;
+}
+
+
+

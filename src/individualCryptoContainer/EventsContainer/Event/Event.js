@@ -6,10 +6,10 @@ const Event = (props) => (
 		<div className='eventDate'>{props.date}</div>
 		<div className="eventInfo">
 			<div className='eventTitle'>{props.title}</div>
-			<div className='eventSummary'>{props.summary ? props.summary : 'Please view the source for more info.'}</div>
+			<div className='eventSummary'>{props.summary ? props.summary : 'View the source for more info.'}</div>
 			<div className='links'>
-				<div><a href={props.sourceurl}>View Source</a></div>
-				<div><a href={props.eventurl}>View Event on Kryptocal</a></div>
+				<a href={props.sourceurl}><button className="viewSourceButton">View Source</button></a>
+				<a href={props.eventurl}><button className="viewKryptocalButton">View Event on Kryptocal</button></a>
 			</div>
 		</div>
 	</li>
