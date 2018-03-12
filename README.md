@@ -1,6 +1,11 @@
 # Cryptocurrency Filter and Summerizer
 
-(my first react project)
+This is my first react project.
+
+I get the homepage data from two sources, market data is from the coinmarketcap api and the icon logos are from the chasing-coins.com api.
+
+On the page for each crypto, the TradingView chart is via an NPM package, the summary data is manually collected by me and stored in a seperate js file, and the event data is obtained from Kryptocal.com and stored in a very large json file. I clean the data up with some functions and then display the first 5 events.
+
 
 ## Features
 ### Homepage:
