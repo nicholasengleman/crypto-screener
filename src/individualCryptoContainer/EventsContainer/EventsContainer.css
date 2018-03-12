@@ -1,7 +1,6 @@
 .eventsContainer {
 	width: 80%;
-	min-width: 500px;
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
 	border: 1px solid darkgrey;
 	box-shadow: 1px 1px 20px #478bdc;
 }
@@ -9,6 +8,12 @@
 .centerAddEventButton {
 	margin: 0 auto;
 	width: 100%;
+}
+
+@media (max-width: 500px) {
+	.eventsContainer {
+		width: 95%;
+	}
 }
 
 

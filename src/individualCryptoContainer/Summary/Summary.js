@@ -1,6 +1,6 @@
 import React from 'react';
-import './cryptoSummary.css';
-import cryptoSummaries from "../../HelpFunctions/cryptoSummaries";
+import './Summary.css';
+import cryptoSummaries from "../../HelperFunctions/cryptoSummaries";
 
 const CryptoSummary = ({id}) => (
 	<section className="cryptoSummary">

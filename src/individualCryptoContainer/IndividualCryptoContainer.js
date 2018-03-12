@@ -1,8 +1,8 @@
 import React from 'react';
 import './IndivisualCryptoContainer.css';
 import TradingViewWidget from 'react-tradingview-widget';
-import TradingViewIDLookup from '../HelpFunctions/TradingViewIDLookup';
-import CryptoSummary from './CryptoSummary/CryptoSummary';
+import TradingViewIDLookup from '../HelperFunctions/TradingViewIDLookup';
+import CryptoSummary from './Summary/Summary';
 
 import EventsContainer from './EventsContainer/EventsContainer';
 

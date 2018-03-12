@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventsContainer.css';
 import Event from './Event/Event';
-import eventdata from  '../../HelpFunctions/EventData.json';
+import eventdata from '../../HelperFunctions/EventData.json';
 
 class EventsContainer extends React.Component {
 	constructor(props) {

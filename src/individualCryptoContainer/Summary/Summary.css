@@ -1,0 +1,37 @@
+.cryptoSummary {
+	width: 65%;
+	min-height: 50px;
+	line-height: 2rem;
+	margin-bottom: 25px;
+	border: 2px solid darkgrey;
+	padding: 10px 10px 10px 20px;
+	font-style: italic;
+}
+
+@media (max-width: 1200px) {
+	.cryptoSummary {
+		margin: 0 auto 25px auto;
+	}
+}
+
+@media (max-width: 1200px) {
+	.cryptoSummary {
+		margin: 0 auto 25px auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.cryptoSummary {
+		width: 90%;
+		font-size: 0.7rem;
+		line-height: 1rem;
+	}
+}
+@media (orientation: landscape) {
+	.cryptoSummary {
+		width: 70%;
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+}
+
