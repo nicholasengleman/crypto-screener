@@ -38,14 +38,13 @@ Top Row of Type Selector Button Styles
 	width: 30%;
 	font-size: 10px;
 	height: 20px;
-	background: lightskyblue;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	margin: 0;
 }
 
 .flexBox button:hover {
-	box-shadow: 0 2px 6px darkslategrey;
+	box-shadow: 0 3px 8px black;
 	cursor: pointer;
 }
 
@@ -107,11 +106,13 @@ Styles for Bottom Row of Submit and Clear buttons
 	height: 30px;
 	outline: none;
 	border: 1px solid darkslategrey;
+	box-shadow: 0 1px 1px darkslategrey;
 	font-weight: bold;
+	transition: all 0.1s;
 }
 
 .buttonContainer button:hover {
-	box-shadow: 0 1px 3px darkslategrey;
+	box-shadow: 0 2px 6px black;
 	cursor: pointer;
 }
 
@@ -127,6 +128,12 @@ Styles for Bottom Row of Submit and Clear buttons
 
 .buttonContainer button.betweenButtons {
 	width: 40%;
+}
+
+@media (max-width: 1000px) {
+	.filterItem {
+		margin-right: 20px;
+	}
 }
 
 
