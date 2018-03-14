@@ -34,9 +34,13 @@ class EventsContainer extends React.Component {
 	}
 
 	render() {
+		let now = Date.now();
 		this.events = eventdata.filter(crypto => {
 			if (crypto[this.props.symbol]) {
-				return true;
+				let date = new Date(crypto[this.props.symbol]['4'].date);
+				if(date.getTime()>now) {
+					return true;
+				}
 			}
  		});
 		this.events = this.events.slice(0, 5);
