@@ -100,6 +100,8 @@ class FilterItem extends React.Component {
 	render() {
 		return (
 			<div className={this.state.selected ? 'filterItem fullOpacity' : this.props.numberOfFilters < 1 ? 'filterItem' : 'filterItem noOpacity'}>
+				{this.Buttons()}
+				<p className="coins">Coins with {this.props.column} </p>
 				<form id="action">
 					<div className="flexBox">
 						<FilterTypeButton selected={this.state.selected} type={this.state.type} clickEvent={this.handleTypeChange} value="below"/>
@@ -115,7 +117,7 @@ class FilterItem extends React.Component {
 																   onChange={this.handleNumber2Change}
 																   className='betweenWidth'/>}
 					</div>
-					{this.Buttons()}
+
 				</form>
 			</div>
 		)

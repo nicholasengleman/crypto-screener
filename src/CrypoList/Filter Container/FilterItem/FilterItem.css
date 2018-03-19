@@ -1,8 +1,8 @@
 .filterItem {
-	width: 150px;
-	min-width: 150px;
+	width: 170px;
+	min-width: 170px;
 	height: 100%;
-	margin: 10px 0;
+	margin-top: 20px;
 	opacity: 1;
 	transition: opacity 0.2s;
 }
@@ -36,16 +36,24 @@ Top Row of Type Selector Button Styles
 	position: static;
 
 	width: 30%;
-	font-size: 10px;
+	font-size: 11px;
 	height: 20px;
 	outline: none;
 	border-radius: 3px;
 	margin: 0;
+	background: #4285F4;
+	color: white;
+	font-family: Cambria, sans-serif;
+	box-shadow: 0 1px 2px black;
+	transition: all 0.10s;
+	letter-spacing: 1px;
+	border: none;
 }
 
 .flexBox button:hover {
-	box-shadow: 0 3px 8px black;
+	box-shadow: 0 3px 5px darkslategrey;
 	cursor: pointer;
+
 }
 
 /*
@@ -74,7 +82,7 @@ Styles for number Inputs
 
 .numberInput input:focus {
 	cursor: pointer;
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 5px black;
 }
 
 .numberInput input.betweenWidth  {
@@ -102,27 +110,31 @@ Styles for Bottom Row of Submit and Clear buttons
 }
 
 .buttonContainer button {
-	width: 70%;
-	height: 30px;
+	width: 50%;
+	height: 25px;
 	outline: none;
-	border: 1px solid darkslategrey;
+	border: none;
 	box-shadow: 0 1px 1px darkslategrey;
 	font-weight: bold;
 	transition: all 0.1s;
+	font-family: Cambria, sans-serif;
+	letter-spacing: 1px;
+	color: white;
 }
 
 .buttonContainer button:hover {
-	box-shadow: 0 2px 6px black;
+	box-shadow: 0 3px 5px darkslategrey;
 	cursor: pointer;
+
 }
 
 .buttonContainer button.clear {
-	background: lightskyblue;
+	background: #4285F4;
 	border-radius: 30px;
 }
 
 .buttonContainer button.submit {
-	background: darkseagreen;
+	background: #00882B;
 	border-radius: 5px;
 }
 
@@ -134,6 +146,13 @@ Styles for Bottom Row of Submit and Clear buttons
 	.filterItem {
 		margin-right: 20px;
 	}
+}
+
+.coins {
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
 }
 
 

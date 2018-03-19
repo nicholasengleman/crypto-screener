@@ -6,10 +6,10 @@ header.individualcrypto {
 	width: 100%;
 	height: 60px;
 	border-bottom: 1px solid darkslategrey;
-	background: #478bdc;
-	line-height: 50px;
+	background: #4285F4;
 	padding: 0 50px;
 	box-shadow: 0 5px 10px darkgrey;
+	line-height: 60px;
 	position: fixed;
 	top: 0;
 }
@@ -26,7 +26,7 @@ header.individualcrypto {
 	display: flex;
 	justify-content: space-evenly;
 	width: 90%;
-	margin: 40px auto 0 auto;
+	margin: 100px auto 0 auto;
 }
 
 .leftColumn {

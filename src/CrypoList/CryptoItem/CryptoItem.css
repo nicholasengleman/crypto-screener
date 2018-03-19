@@ -6,9 +6,10 @@
 	font-family: Calibri;
 	font-size: 16px;
 	height: 100%;
+	color: black;
 }
 .cryptoListItems div {
-	width: 150px;
+	width: 170px;
 	height: 35px;
 	line-height: 35px;
 	text-align: left;
@@ -23,25 +24,30 @@
 }
 
 .formatForProfit {
-	color: green;
+	color: #00882B;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 20px;
 }
 
 .formatForLoss {
-	color: red;
+	color: #C82606;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 20px;
 }
 
 .cryptoName h2 {
 	font-size: 20px;
 	font-weight: bold;
 	margin-left: 50px;
+	color: #4285F4;
 }
 
-.cryptoName h2:hover {
-	text-decoration: underline;
+.CryptoList a {
+	text-decoration: none;
+}
+
+.cryptoListItems:hover {
+	background: #f0f0f0;
 }
 
 .cryptoName img {
