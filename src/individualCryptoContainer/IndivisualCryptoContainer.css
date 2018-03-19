@@ -27,6 +27,7 @@ header.individualcrypto {
 	justify-content: space-evenly;
 	width: 90%;
 	margin: 100px auto 0 auto;
+	height: 89.4vh;
 }
 
 .leftColumn {
@@ -35,8 +36,7 @@ header.individualcrypto {
 
 .chart {
 	height: 600px;
-	border: 1px solid darkgrey;
-	box-shadow: 1px 1px 20px #478bdc;
+	box-shadow: 1px 1px 15px #478bdc;
 }
 
 .rightColumn {

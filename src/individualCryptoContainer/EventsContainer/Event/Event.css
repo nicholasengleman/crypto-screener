@@ -21,7 +21,7 @@
 .eventTitle {
 	height: 30px;
 	line-height: 30px;
-	padding-left: 10px;
+	padding-left: 20px;
 	overflow: hidden;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -29,10 +29,12 @@
 }
 
 .eventSummary {
-	line-height: 1.05rem;
+	line-height: 1rem;
 	padding: 0 10px;
-	height: 70px;
-	font-size: 0.8rem;
+	height: 65px;
+	font-size: .8rem;
+	overflow: hidden;
+	margin-bottom: 5px;
 }
 
 .links {

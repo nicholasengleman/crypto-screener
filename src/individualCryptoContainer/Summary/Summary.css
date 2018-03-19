@@ -3,9 +3,10 @@
 	min-height: 50px;
 	line-height: 2rem;
 	margin-bottom: 25px;
-	border: 2px solid darkgrey;
+	border: 2px solid darkslategrey;
 	padding: 10px 10px 10px 20px;
 	font-style: italic;
+	background: white;
 }
 
 @media (max-width: 1200px) {
