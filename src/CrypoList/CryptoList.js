@@ -121,7 +121,7 @@ class CryptoList extends React.Component {
 
 
 	componentDidMount() {
-		fetch('https://api.coinmarketcap.com/v1/ticker/?limit=100')
+		fetch('https://api.coinmarketcap.com/v1/ticker/?limit=500')
 			.then(results => {
 				return results.json();
 			}).then(data => {

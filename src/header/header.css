@@ -1,10 +1,16 @@
 .header {
-	width: 100%;
 	height: 60px;
 	border-bottom: 1px solid darkslategrey;
 	background: #478bdc;
-	line-height: 50px;
-	text-align: center;
+	box-shadow: 0 5px 10px darkgrey;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	margin: 0 auto;
+	width: 90%;
 }
 
 .header h1 {
@@ -12,4 +18,8 @@
 	font-family: Garamond, sans-serif;
 	letter-spacing: 2px;
 	color: white;
+}
+
+.totalCrypto {
+	margin-right: 100px;
 }

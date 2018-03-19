@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './header/Header';
 import CryptoList from './CrypoList/CryptoList';
-import TotalCrypto from './TotalCrypto/TotalCrypto';
 
 class App extends Component {
     constructor(props) {
@@ -25,8 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="square">
-          <Header/>
-          <TotalCrypto totalCryptos={this.state.totalCryptos}/>
+          <Header totalCryptos={this.state.totalCryptos}/>
           <CryptoList getTotalCryptosAfterFilters={this.getTotalCryptosAfterFilters}/>
       </div>
     );

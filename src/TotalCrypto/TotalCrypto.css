@@ -1,21 +1,16 @@
 
 .totalCryptoNumber {
 	font-size: 20px;
-	width: 200px;
+	width: 170px;
 	height: 30px;
-	border: 1px solid sandybrown;
+	border: 2px solid grey;
 	text-align: center;
 	line-height: 30px;
-	margin-left: 100px;
-	background: #d0f2c9;
+	background: #2fe2e9;
+	border-radius: 5px;
 }
 
 .bold {
 	font-weight: bold;
 }
 
-@media (max-width: 1000px) {
-	.totalCryptoNumber {
-		margin-left: 0;
-	}
-}

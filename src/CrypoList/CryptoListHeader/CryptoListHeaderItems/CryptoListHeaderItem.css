@@ -9,7 +9,7 @@ h3 {
 	width: 150px;
 	height: 30px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	line-height: 30px;
 }
 
@@ -21,10 +21,6 @@ h3 {
 	width: 275px;
 }
 
-
-
-
-
 .headerItem:hover {
 	cursor: pointer;
 	background: #6eeefa;
@@ -32,5 +28,6 @@ h3 {
 
 .FontAwesomeIcon {
 	color: darkseagreen;
+	margin-right: 20px;
 }
 
