@@ -37,6 +37,7 @@ header.individualcrypto {
 .chart {
 	height: 600px;
 	box-shadow: 1px 1px 15px #478bdc;
+	z-index: 0;
 }
 
 .rightColumn {

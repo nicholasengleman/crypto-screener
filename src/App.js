@@ -19,8 +19,6 @@ class App extends Component {
 		this.setState({totalCryptos});
     }
 
-
-
   render() {
     return (
       <div className="square">

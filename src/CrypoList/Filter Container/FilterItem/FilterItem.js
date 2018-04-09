@@ -11,8 +11,8 @@ class FilterItem extends React.Component {
 			newInput: false,
 			column: "",
 			type: "",
-			number1: "",
-			number2: ""
+			number1: null,
+			number2: null
 		};
 
 		this.submit = this.submit.bind(this);
@@ -42,8 +42,8 @@ class FilterItem extends React.Component {
 			selected: false,
 			newInput: false,
 			type: "",
-			number1: "",
-			number2: ""
+			number1: null,
+			number2: null
 		});
 		event.preventDefault();
 	}
@@ -57,14 +57,14 @@ class FilterItem extends React.Component {
 	}
 
 	handleNumber1Change(event) {
-		this.setState({number1: parseFloat(event.target.value)});
+		this.setState({number1: event.target.value});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}
 	}
 
 	handleNumber2Change(event) {
-		this.setState({number2: parseFloat(event.target.value)});
+		this.setState({number2: event.target.value});
 		if (this.state.selected) {
 			this.setState({newInput: true});
 		}

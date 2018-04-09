@@ -35,7 +35,7 @@ Top Row of Type Selector Button Styles
 	opacity: 1;
 	position: static;
 
-	width: 30%;
+	width: 31%;
 	font-size: 11px;
 	height: 20px;
 	outline: none;
@@ -86,7 +86,7 @@ Styles for number Inputs
 }
 
 .numberInput input.betweenWidth  {
-	width: 30%;
+	width: 31%;
 }
 
 input[type=number]::-webkit-inner-spin-button,

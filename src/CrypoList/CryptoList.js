@@ -328,4 +328,4 @@ class CryptoList extends React.Component {
 	}
 }
 
-export default CryptoList;
+	export default CryptoList;

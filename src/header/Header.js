@@ -6,7 +6,7 @@ class Header extends React.Component {
 	render() {
 		return (
 			<div className="header">
-				<h1>Cryptocurrency Filter</h1>
+				<h1>React Cryptocurrency Filter</h1>
 				<TotalCrypto className="totalCrypto" totalCryptos={this.props.totalCryptos}/>
 			</div>
 		)
