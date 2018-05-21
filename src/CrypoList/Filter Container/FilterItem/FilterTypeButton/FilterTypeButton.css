@@ -20,6 +20,9 @@ button {
 
 .typeButtonSelected {
 	box-shadow: 0 3px 5px darkslategrey;
+	background: #5bc5ff;
+	color: black;
+
 }
 
 .centerButton {

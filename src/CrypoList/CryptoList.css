@@ -1,8 +1,9 @@
 .main {
 	width: 90%;
-	min-width: 1200px;
+	min-width: 1505px;
  	margin: 90px auto 0 auto;
 	box-shadow: 1px 1px 15px #478bdc;
 	padding: 0 30px;
 	background: white;
+	overflow-x: auto;
 }

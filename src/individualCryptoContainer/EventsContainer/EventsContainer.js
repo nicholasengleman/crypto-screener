@@ -42,6 +42,7 @@ class EventsContainer extends React.Component {
 					return true;
 				}
 			}
+			return false;
  		});
 		this.events = this.events.slice(0, 5);
 		return (

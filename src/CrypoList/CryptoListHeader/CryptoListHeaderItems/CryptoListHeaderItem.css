@@ -11,10 +11,12 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 	line-height: 30px;
+	margin-right: 5px;
 }
 
 .headerItem:first-child {
 	width: 50px;
+
 }
 
 .headerItem:nth-child(2) {

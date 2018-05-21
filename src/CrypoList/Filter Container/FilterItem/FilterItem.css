@@ -5,6 +5,7 @@
 	margin-top: 20px;
 	opacity: 1;
 	transition: opacity 0.2s;
+	margin-right: 5px;
 }
 
 .noOpacity {
@@ -52,6 +53,8 @@ Top Row of Type Selector Button Styles
 
 .flexBox button:hover {
 	box-shadow: 0 3px 5px darkslategrey;
+	background: #5bc5ff;
+	color: black;
 	cursor: pointer;
 
 }
@@ -78,11 +81,12 @@ Styles for number Inputs
 
 .numberInput input:hover {
 	cursor: pointer;
+	box-shadow: 0 0 1px 1px #5bc5ff;
 }
 
 .numberInput input:focus {
 	cursor: pointer;
-	box-shadow: 0 0 5px black;
+	box-shadow: 0 0 2px 3px #5bc5ff;
 }
 
 .numberInput input.betweenWidth  {
@@ -123,8 +127,10 @@ Styles for Bottom Row of Submit and Clear buttons
 }
 
 .buttonContainer button:hover {
-	box-shadow: 0 3px 5px darkslategrey;
 	cursor: pointer;
+	box-shadow: 0 3px 5px darkslategrey;
+	background: #5bc5ff;
+	color: black;
 
 }
 
@@ -151,8 +157,12 @@ Styles for Bottom Row of Submit and Clear buttons
 .coins {
 	margin: 10px 0;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 	text-align: center;
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 

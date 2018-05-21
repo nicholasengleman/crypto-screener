@@ -9,10 +9,10 @@ class FilterItem extends React.Component {
 		this.state = {
 			selected: false,
 			newInput: false,
-			column: "",
-			type: "",
-			number1: null,
-			number2: null
+			column: '',
+			type: '',
+			number1: '',
+			number2: ''
 		};
 
 		this.submit = this.submit.bind(this);
@@ -41,9 +41,9 @@ class FilterItem extends React.Component {
 		this.setState({
 			selected: false,
 			newInput: false,
-			type: "",
-			number1: null,
-			number2: null
+			type: '',
+			number1: '',
+			number2: ''
 		});
 		event.preventDefault();
 	}
@@ -101,7 +101,7 @@ class FilterItem extends React.Component {
 		return (
 			<div className={this.state.selected ? 'filterItem fullOpacity' : this.props.numberOfFilters < 1 ? 'filterItem' : 'filterItem noOpacity'}>
 				{this.Buttons()}
-				<p className="coins">Coins with {this.props.column} </p>
+				<p className="coins">coins with <span className="underline">{this.props.name}</span></p>
 				<form id="action">
 					<div className="flexBox">
 						<FilterTypeButton selected={this.state.selected} type={this.state.type} clickEvent={this.handleTypeChange} value="below"/>
